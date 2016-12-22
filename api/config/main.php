@@ -77,7 +77,9 @@ return [
                         'user',
                         'v1/user',
                         'v2/user',
-                        'v1/version'
+                        'v1/version',
+                        'v1/banner',
+                        'v1/news',
                     ]
                 ]
             ]
