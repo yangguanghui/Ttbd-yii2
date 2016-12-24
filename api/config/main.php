@@ -80,6 +80,7 @@ return [
                         'v1/version',
                         'v1/banner',
                         'v1/news',
+                        'v1/notice',
                     ]
                 ]
             ]
