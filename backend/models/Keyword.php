@@ -31,7 +31,7 @@ class Keyword extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['keyword'], 'string', 'max' => 32],
+            [['keyword'], 'string', 'max' => 66],
         ];
     }
 

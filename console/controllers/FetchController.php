@@ -51,7 +51,7 @@ class FetchController extends Controller
                         if (strpos($rankDetail->pic_url, 'http') !== 0) {
                             $rankDetail->pic_url = $v->baseURI . ltrim($rankDetail->pic_url, './');
                         }
-                        $rankDetail->name = trim(pq($rankPattern->name_pattern, $v)->text());
+                        $rankDetail->name = trim(pq($rankPattern->name_pattern, $v)->attr('title'));
                         if (empty($rankDetail->name)) {
                             continue;
                             // throw new \Exception('name empty' . $category->source_cate_url . " " . $pq->html());
