@@ -23,6 +23,7 @@ use Yii;
  * @property string $cate_name_pattern3
  * @property string $cate_id_pattern3
  * @property string $cate_url_pattern3
+ * @property string $created_at
  *
  * @property Source $sourceName
  */
@@ -42,6 +43,7 @@ class Task extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+            [['created_at'], 'safe'],
             [['source_name'], 'string', 'max' => 32],
             [['url'], 'string', 'max' => 256],
             [['cate_list_selector1', 'cate_name_pattern1', 'cate_id_pattern1', 'cate_url_pattern1', 'cate_list_selector2', 'cate_name_pattern2', 'cate_id_pattern2', 'cate_url_pattern2', 'cate_after_pattern2', 'cate_list_selector3', 'cate_name_pattern3', 'cate_id_pattern3', 'cate_url_pattern3'], 'string', 'max' => 128],
@@ -71,6 +73,7 @@ class Task extends \yii\db\ActiveRecord
             'cate_name_pattern3' => 'Cate Name Pattern3',
             'cate_id_pattern3' => 'Cate Id Pattern3',
             'cate_url_pattern3' => 'Cate Url Pattern3',
+            'created_at' => 'Created At',
         ];
     }
 

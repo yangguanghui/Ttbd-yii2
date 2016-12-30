@@ -4,13 +4,13 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\Task */
+/* @var $model backend\models\RankPattern */
 
-$this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Tasks', 'url' => ['index']];
+$this->title = $model->name;
+$this->params['breadcrumbs'][] = ['label' => 'Rank Patterns', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="task-view">
+<div class="rank-pattern-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -29,21 +29,19 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'source_name',
-            'url:url',
-            'cate_list_selector1',
-            'cate_name_pattern1',
-            'cate_id_pattern1',
-            'cate_url_pattern1:url',
-            'cate_list_selector2',
-            'cate_name_pattern2',
-            'cate_id_pattern2',
-            'cate_url_pattern2:url',
-            'cate_after_pattern2',
-            'cate_list_selector3',
-            'cate_name_pattern3',
-            'cate_id_pattern3',
-            'cate_url_pattern3:url',
+            'name',
+            'list_selector',
+            'pos_pattern',
+            'pic_url_pattern:url',
+            'name_pattern',
+            'brief_pattern',
+            'detail_url_pattern:url',
+            'rate_or_score',
+            'rate_or_score_pattern',
+            'up_or_down_pattern',
+            'people1_pattern',
+            'people2_pattern',
+            'people3_pattern',
             'created_at',
         ],
     ]) ?>

@@ -41,6 +41,8 @@ AppAsset::register($this);
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
     } else {
         $menuItems[] = ['label' => 'Task', 'url' => ['/task/index']];
+        $menuItems[] = ['label' => 'RankPattern', 'url' => ['/rank-pattern/index']];
+        $menuItems[] = ['label' => 'Cagegory', 'url' => ['/category/index']];
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')
             . Html::submitButton(

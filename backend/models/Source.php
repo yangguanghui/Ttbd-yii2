@@ -35,7 +35,7 @@ class Source extends \yii\db\ActiveRecord
         ];
     }
 
-    /**
+     /**
      * @inheritdoc
      */
     public function attributeLabels()
@@ -45,6 +45,14 @@ class Source extends \yii\db\ActiveRecord
             'name' => 'Name',
             'created_at' => 'Created At',
         ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getCategories()
+    {
+        return $this->hasMany(Category::className(), ['source_id' => 'id']);
     }
 
     /**

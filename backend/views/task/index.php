@@ -38,6 +38,7 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'cate_name_pattern3',
             // 'cate_id_pattern3',
             // 'cate_url_pattern3:url',
+            // 'created_at',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
